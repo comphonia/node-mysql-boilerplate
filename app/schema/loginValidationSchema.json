@@ -1,0 +1,58 @@
+{
+    "getSchema":{
+       "type": "object",
+       "required": [
+         "id"     
+       ],
+       "properties": {
+         "id" : {
+           "type": "string"
+         }
+       }
+    },
+    "loginSchema":{
+        "type": "object",
+        "required": [
+          "username",
+          "password"     
+        ],
+        "properties": {
+          "username" : {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20
+          },
+          "password" : {
+            "type" : "string",
+            "minLength": 1,
+            "maxLength": 20
+          }
+        }
+     },
+     "signUpSchema":{
+      "type": "object",
+      "required": [
+        "email",
+        "username",
+        "password"     
+      ],
+      "properties": {
+        "email" : {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
+          "format": "email"
+        },
+        "username" : {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20
+        },
+        "password" : {
+          "type" : "string",
+          "minLength": 1,
+          "maxLength": 20
+        }
+      }
+   }
+}
